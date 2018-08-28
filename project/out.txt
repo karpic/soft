@@ -1,0 +1,12 @@
+RA 55/2014 Arsenije Karpic
+file	sum
+video-0.avi 18.0
+video-1.avi 75.0
+video-2.avi 76.0
+video-3.avi 62.0
+video-4.avi 95.0
+video-5.avi 129.0
+video-6.avi 101.0
+video-7.avi 113.0
+video-8.avi 171.0
+video-9.avi 109.0
