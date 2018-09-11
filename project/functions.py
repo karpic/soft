@@ -140,17 +140,14 @@ def find_numbers_on_image(frameNumber, frame, id):
     return list_of_found_instances
 
 
-# funkcija koja uzima vrednost broja: kroz MNIST se gleda onaj sa najmanjom razlikom i uzima se kao prepoznat
 def pretragaOkruzenja(vrednost, skup_vrednosti):
     prihvatljiv_broj = []
 
     for idx in skup_vrednosti:
-        if (distance(idx[2], vrednost[2]) < 9): # 9 je random stavljeno :D
+        if (distance(idx[2], vrednost[2]) < 9):
             prihvatljiv_broj.append(idx)
 
-    # provera da li u okruzenju ima vise brojeva
-    if len(prihvatljiv_broj) > 1: # u okruzenju ima vise brojeva
-        # uzimaju se cenri cifara koji se potom porede
+    if len(prihvatljiv_broj) > 1:
         najmanja_duzina = distance(vrednost[2], prihvatljiv_broj[0][2])
         temp = prihvatljiv_broj[0]
         lista_u_okruzenju = []
@@ -161,7 +158,7 @@ def pretragaOkruzenja(vrednost, skup_vrednosti):
         lista_u_okruzenju.append(temp)
         return lista_u_okruzenju
     else:
-        return prihvatljiv_broj # u okruzenju je samo jedan broj
+        return prihvatljiv_broj 
 
 
 def detected_numbers(list_of_found_numbers, frameNumber, numbers, id):
